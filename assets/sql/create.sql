@@ -1,0 +1,2 @@
+CREATE TABLE trips(id INTEGER PRIMARY KEY, nome TEXT, dataViagem TEXT);
+CREATE TABLE passageiros(id INTEGER PRIMARY KEY, pnome TEXT, psobrenome TEXT,to_pay INTEGER, trip_id INTEGER, CONSTRAINT fk_trips FOREIGN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE);
